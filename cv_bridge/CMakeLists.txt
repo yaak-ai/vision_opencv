@@ -39,7 +39,7 @@ else()
 endif()
 
 find_package(sensor_msgs REQUIRED)
-find_package(opencv 4 REQUIRED
+find_package(OpenCV 4 REQUIRED
   COMPONENTS
     opencv_core
     opencv_imgproc
@@ -65,7 +65,7 @@ if(BUILD_TESTING)
   add_subdirectory(test)
 endif()
 
-ament_export_dependencies(opencv)
+ament_export_dependencies(OpenCV)
 
 ament_export_include_directories(include)
 ament_export_libraries(${PROJECT_NAME})

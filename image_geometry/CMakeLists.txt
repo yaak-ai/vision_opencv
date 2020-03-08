@@ -17,7 +17,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra)
 endif()
 
-find_package(opencv REQUIRED COMPONENTS calib3d core highgui imgproc)
+find_package(OpenCV REQUIRED COMPONENTS calib3d core highgui imgproc)
 find_package(sensor_msgs REQUIRED)
 
 include_directories(include)
@@ -29,7 +29,7 @@ add_library(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBRARIES})
 ament_target_dependencies(
   ${PROJECT_NAME}
-  opencv
+  OpenCV
   sensor_msgs
 )
 
@@ -59,6 +59,6 @@ if(BUILD_TESTING)
 endif()
 
 ament_export_libraries(${PROJECT_NAME})
-ament_export_dependencies(opencv)
+ament_export_dependencies(OpenCV)
 ament_export_include_directories(include)
 ament_package()
