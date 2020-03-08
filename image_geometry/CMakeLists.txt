@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 project(image_geometry)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "/opt/cmake/modules/")
+
 find_package(ament_cmake_python REQUIRED)
 find_package(ament_cmake_ros REQUIRED)
 
